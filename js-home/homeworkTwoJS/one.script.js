@@ -1,4 +1,4 @@
-// let arrayOne = [2,17,13,6,22,31,45,66,100,-18];
+let arrayOne = [2,17,13,6,22,31,45,66,100,-18];
 
 // виведення while
 // let one = 0;
@@ -78,10 +78,10 @@
 // }
 //
 // непарний індекс for
-// for (let one = arrayOne.length - 1; one >= 0; one-=2) {
-//     document.write(arrayOne[one]);
-//     document.write('<br>');
-// }
+for (let one = arrayOne.length - 1; one >= 0; one-=2) {
+    document.write(arrayOne[one]);
+    document.write('<br>');
+}
 //
 //
 // парне значення while
@@ -112,15 +112,15 @@
 //     document.write('<br>');
 // }
 
-// let arrayTwo = [ ];
-//
-// пустий масив -> заповнений 50 цифрами парними
-// for (let i = 0; i <= 50; i++) {
-//     if (i % 2 === 0) {
-//         arrayTwo.push(i);
-//     }
-// }
-// document.write(arrayTwo);
+let arrayTwo = [ ];
+// //
+// // пустий масив -> заповнений 50 цифрами парними
+for (let i = 0; i <= 100; i++) {
+    if (i % 2 === 0) {
+        arrayTwo.push(i);
+    }
+}
+document.write(arrayTwo);
 //
 //
 //// пустий масив -> заповнений 50 цифрами непарними
