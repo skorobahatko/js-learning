@@ -116,12 +116,12 @@
 // let second = 0;
 // let minute = 0;
 // let hour = 0;
-
+//
 // for (minute = 0; minute <= 2; minute++) {
 //     for (second = 0; second < 60; second++) {
 //         if (minute === 0) {
 //             document.write(`${second} seconds <br>`);
-//         } else if (minute === 2 && second === 0) {
+//         } else if (minute === 2 && second === 1) {
 //             break;
 //         } else if (minute === 1 && second === 0) {
 //             document.write(`${minute} minute <br>`);
@@ -132,7 +132,7 @@
 // }
 // - Відтворити роботу годинника, відрахувавши  2 години 20 хвилини (3 цикли! 1й - години, 2й - хвилини, 3й - секунди)
 
-
+//
 // for (hour = 0; hour <= 2; hour++) {
 //     for (minute = 0; minute < 60; minute++) {
 //         for (second = 0; second < 60; second++) {
@@ -142,24 +142,28 @@
 //                 document.write(`${minute} minute <br>`);
 //             } else if (hour === 0) {
 //                 document.write(`${minute} minute ${second} second <br>`);
+//             } else if (hour === 2 && minute === 20 && second === 1) {
+//                 break;
+//             } else if (hour !== 0 && minute !== 0 && second === 0) {
+//                 document.write(`${hour} hour ${minute} minute <br>`);
 //             } else if (hour !== 0) {
 //                 document.write(`${hour} hour ${minute} minute ${second} second <br>`);
-//             } else if (hour === 2 && minute === 20) {
-//                 break;
 //             }
 //         }
-//         if (hour === 2 && minute === 19) {
-//             break;
+//         if (hour === 2 && minute === 20) {
+//                 break;
 //         }
 //     }
 // }
 
 
+
 // Додатково
 // - Дано масив: [ 'a', 'b', 'c'] . За допомогою циклу for зібрати всі букви в слово.
 // let arrayOne = [ 'a', 'b', 'c'];
+// let word = '';
 // for (let i = 0; i < arrayOne.length; i++) {
-//     document.write(arrayOne[i])
+//     word = word + arrayOne[i];
 // }
 // - Дано масив: [ 'a', 'b', 'c'] . За допомогою циклу while зібрати всі букви в слово.
 // let i = 0;
@@ -180,22 +184,63 @@
 // - Дан масив ['a', 'b', 'c']. Додайте йому в кінець елементи 1, 2, 3 за допомогою циклу.
 // let arrayOne = [ 'a', 'b', 'c'];
 //
-// for (let i = 1; i < arrayOne.length; i++) {
-//     arrayOne.push("1, 2, 3");
+// for (let i = 1; i < 4; i++) {
+//     arrayOne.push(i);
 // }
+// console.log(arrayOne);
 // - Дан масив [1, 2, 3]. Зробіть з нього новий масив [3, 2, 1].
-
+// let arrayNotReversed = [1, 2, 3];
+// let arrayReversed = arrayNotReversed.reverse();
+// console.log(arrayReversed);
 // - Дан масив [1, 2, 3]. Додайте йому в кінець елементи 4, 5, 6.
 // - Дан масив [1, 2, 3]. Додайте йому в початок елементи 4, 5, 6.
+// let arrayNumberEnd = [1, 2, 3];
+// for (let i = 4; i < 7; i++) {
+//     arrayNumberEnd.push(i);
+// }
+// console.log(arrayNumberEnd);
+// for (let i = 6; i > 3; i--) {
+//     arrayNumberEnd.unshift(i);
+// }
+// console.log(arrayNumberEnd);
 // - Дан масив ['js', 'css', 'jq']. Виведіть на екран перший елемент за допомогою shift()
 // - Дан масив ['js', 'css', 'jq']. Виведіть на екран останній елемент за допомогою pop()
-// - Дан масив [1, 2, 3, 4, 5]. За допомогою методу/функції slice перетворіть масив в [1, 4, 5].
-// - Дан масив [1, 2, 3, 4, 5]. За допомогою методу/функції slice перетворіть масив в [4, 5].
-// - Дан масив [1, 2, 3, 4, 5]. За допомогою методу/функції slice перетворіть масив в [1,2].
+// let arrayLanguages = ['js', 'css', 'jq'];
+// console.log(arrayLanguages.shift());
+// console.log(arrayLanguages.pop());
+// - Дан масив [1, 2, 3, 4, 5]. За допомогою методу/функції slice перетворіть масив в [1, 4, 5]. ???
+// - Дан масив [1, 2, 3, 4, 5]. За допомогою методу/функції slice перетворіть масив в [4, 5]. ????
+// - Дан масив [1, 2, 3, 4, 5]. За допомогою методу/функції slice перетворіть масив в [1,2]. ????
+
+
 // - Дан масив [1, 2, 3, 4, 5]. За допомогою методу/функції splice зробіть з нього масив [1, 2, 3, 'a', 'b', 'c', 4, 5].
 // - Дан масив [1, 2, 3, 4, 5]. За допомогою методу/функції splice зробіть з нього масив [1, 'a', 'b', 2, 3, 4, 'c', 5, 'e'].
+// let arrayNumbers = [1, 2, 3, 4, 5];
+// arrayNumbers.splice(3, 0, 'a', 'b', 'c');
+// console.log(arrayNumbers);
+
+// arrayNumbers.splice(1, 0, 'a', 'b');
+// console.log(arrayNumbers);
+//
+// arrayNumbers.splice(6, 0, 'c');
+// console.log(arrayNumbers);
+//
+// arrayNumbers.splice(8, 0, 'e');
+// console.log(arrayNumbers);
 // - Взяти масив з 10 чисел або створити його. Вивести в консоль тільки ті елементи, значення яких є парними.
+// let arrayNumbers = [125, 234, 1221, 12, 659, 4578, 28, 2, 975, 346];
+// for (let j = 0; j < arrayNumbers.length; j++) {
+//     if (arrayNumbers[j] % 2 === 0) {
+//         console.log(arrayNumbers[j]);
+//     }
+// }
 // - Взяти масив з 10 чисел або створити його. Створити 2й порожній масив. За допомогою будь-якого циклу та push () скопіювати значення одного масиву в інший
+// let arrayNumbers = [125, 234, 1221, 12, 659, 4578, 28, 2, 975, 346];
+// let arrayEmpty = [];
+// for (let i = 0; i < arrayNumbers.length; i++) {
+//     arrayEmpty.push(arrayNumbers[i]);
+// }
+// console.log(arrayEmpty);
 // - Взяти масив з 10 чисел або створити його. Створити 2й порожній масив. За допомогою будь-якого циклу скопіювати значення одного масиву в інший.
 //
 //
