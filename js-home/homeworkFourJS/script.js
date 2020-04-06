@@ -89,7 +89,7 @@
 
 // - створити функцію яка повертає найменьше число з масиву
 
-// let arrayToLog = [21, 1, 546, 12, 445, 21];
+// let arrayToLog = [1, 2, 3, 4, 5, 6];
 //
 // function maxValueNumber(array) {
 //     let max = array[0];
@@ -146,36 +146,36 @@
 
 // - Створити функцію яка приймає масив будь яких объектів, та повертає значення кількості об'єктів в масиві
 
-// let arrayCars = [
-//     {model: 'BMW', year: 2011, power: 300, color: 'blue'},
-//     {model: 'Volkswagen', year: 2014, power: 320, color: 'red'},
-//     {model: 'Mersedes-Benz', year: 2015, power: 400, color: 'black'},
-//     {model: 'Renault', year: 2010, power: 330, color: 'blue'},
-//     {model: 'Volvo', year: 2012, power: 350, color: 'blue'},
-//     {model: 'Opel', year: 2011, power: 300, color: 'blue'},
-//     {model: 'Porsche', year: 2009, power: 500, color: 'blue'},
-//     {model: 'Jeep', year: 2009, power: 400, color: 'blue'},
-//     {model: 'Volvo', year: 2001, power: 200, color: 'blue'},
-//     {model: 'BMW', year: 2002, power: 250, color: 'blue'}
-// ];
+let arrayCars = [
+    {model: 'BMW', year: 2011, power: 300, color: 'blue'},
+    {model: 'Volkswagen', year: 2014, power: 320, color: 'red'},
+    {model: 'Mersedes-Benz', year: 2015, power: 400, color: 'black'},
+    {model: 'Renault', year: 2010, power: 330, color: 'blue'},
+    {model: 'Volvo', year: 2012, power: 350, color: 'blue'},
+    {model: 'Opel', year: 2011, power: 300, color: 'blue'},
+    {model: 'Porsche', year: 2009, power: 500, color: 'blue'},
+    {model: 'Jeep', year: 2009, power: 400, color: 'blue'},
+    {model: 'Volvo', year: 2001, power: 200, color: 'blue'},
+    {model: 'BMW', year: 2002, power: 250, color: {name: 'Max', years: 19}}
+];
 //
-// function arrayNumberObject(array) {
-//     return array.length;
-// }
-//
-// console.log(arrayNumberObject(arrayCars));
+function arrayNumberObject(array) {
+    return array.length;
+}
+
+console.log(arrayNumberObject(arrayCars));
 
 // - Створити функцію яка приймає масив будь яких объектів, та повертає загальн кількість полів в них
 
-// function arrayNumberObjectKeys (array) {
-//     let arr = 0;
-//     for (let i = 0; i< array.length; i++) {
-//         arr = arr + Object.keys(array[i]).length;
-//     }
-//     return arr;
-// }
-//
-// console.log(arrayNumberObjectKeys(arrayCars));
+function arrayNumberObjectKeys (array) {
+    let arr = 0;
+    for (let i = 0; i< array.length; i++) {
+        arr = arr + Object.keys(array[i]).length;
+    }
+    return arr;
+}
+
+console.log(arrayNumberObjectKeys(arrayCars));
 
 // - створити функцію  яка скаладає значення елементів з однаковими індексами  та повертає новий результуючий масив.
 
@@ -195,19 +195,39 @@
 
 // - *** приймає масив та число "i", та міняє місцями об`єкт який знаходиться в індексі "i" на "i+1"
 
+// let arrayToLog = [1, 2, 3, 4, 5, 6];
+//
 // function replaceElement (array, i) {
-//     array.splice(i, 0, i + 1);
-//     return array;                                потім сам вирішу
+//     array.splice(i, 2, array[i + 1], array[i] );
+//     return array;
 // }
 //
-// console.log(replaceElement(arrayToLog, 2));
+// console.log(replaceElement(arrayToLog, 0));
 
 // - *** створити функцію яка буде переносити елементи з значенням 0 у кінець маисву. Зберігаючи при цьому порядок не нульових значень.
 // Двожина масиву від 2 до 100
 // Приклад
-// [1,0,6,0,3] => [1,6,3,0,0]
-// [0,1,2,3,4] => [1,2,3,4,0]                       потім
-// [0,0,1,0]   => [1,0,0,0]
+// let arr0 = [0,0,1,0];
+// let arr1 = [0,1,2,3,4];
+// // [0,0,1,0]   => [1,0,0,0]
+//
+// function zeroToEnd (array) {
+//     let arrayForZeros = [];
+//     let arrayToConcat = [];
+//     for (let arrayElement of array) {
+//         if (arrayElement === 0) {
+//             arrayForZeros.push(arrayElement);
+//         } else {
+//             arrayToConcat.push(arrayElement);
+//         }
+//     }
+//     let final = arrayToConcat.concat(arrayForZeros);
+//     console.log(final);
+//     return final;
+// }
+//
+// zeroToEnd(arr0);
+
 //
 // Створити функцію яка :
 // - Додає в боді блок з текстом "Hello owu"

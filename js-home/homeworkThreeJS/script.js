@@ -754,22 +754,49 @@
 //
 // ];
 
-for (let rule of rules) {
-    let ruleNumber = document.createElement('div');
-        let titleH2 = document.createElement('h2');
-        let bodyP = document.createElement('p');
-        titleH2.innerText = rule.title;
-        bodyP.innerText = rule.body;
-        ruleNumber.appendChild(titleH2);
-        ruleNumber.appendChild(bodyP);
-    document.body.appendChild(ruleNumber);
+// for (let rule of rules) {
+//     let ruleNumber = document.createElement('div');
+//         let titleH2 = document.createElement('h2');
+//         let bodyP = document.createElement('p');
+//         titleH2.innerText = rule.title;
+//         bodyP.innerText = rule.body;
+//         ruleNumber.appendChild(titleH2);
+//         ruleNumber.appendChild(bodyP);
+//     document.body.appendChild(ruleNumber);
+// }
+
+function funcOne (type, contentt) {
+    let element = document.createElement(type);
+    element.innerText = contentt;
+    document.body.appendChild(element);
 }
+
+funcOne('h1','hello!');
 
 //
 //
 //
 //
-// *** за допомогою fetch (як в прикладі) отримати від jsonplaceholder всі users. За допомогою document.createElement вивести їх в браузер. Помістити кожен окремий об'єкт в блок, при цьому кожен внутрішній об'єкт в свій блок (блок в блоці).
+// *** за допомогою fetch (як в прикладі) отримати від jsonplaceholder всі users. За допомогою document.createElement
+// вивести їх в браузер. Помістити кожен окремий об'єкт в блок, при цьому кожен внутрішній об'єкт в свій блок (блок в блоці).
+
+fetch('https://jsonplaceholder.typicode.com/users').then(users => users.json()).then(usersJSON => {
+
+    let allUser = document.createElement('div');
+
+    for (let user of usersJSON) {
+        let userNumber = document.createElement('div');
+        for (let userElement in user) {
+            let userElementInDoc = document.createElement('div');
+            userElementInDoc.innerText = `${userElement} -- ${user[userElement]}`;
+            userNumber.appendChild(userElementInDoc);
+        }
+        allUser.appendChild(userNumber);
+    }
+    document.body.appendChild(allUser);
+
+})
+
 // *** за допомогою fetch (як в прикладі) отримати від jsonplaceholder всі posts. За допомогою document.createElement вивести їх в браузер. Помістити кожен окремий об'єкт в блок, при цьому кожен внутрішній об'єкт(якщо він існує) в свій блок (блок в блоці).
 // *** за допомогою fetch (як в прикладі) отримати від jsonplaceholder всі comments. За допомогою document.createElement вивести їх в браузер. Помістити кожен окремий об'єкт в блок, при цьому кожен внутрішній об'єкт(якщо він існує) в свій блок (блок в блоці).
 // ****** при помощи fetch (как в примере) получить от jsonplaceholder все posts. Внутри последнего then() сделать еще один fetch который сделает запрос и получит все comments. Объеденить соответсвующий post с соответсвующими comment и вывести в браузер. Подсказка : в каждом comment есть поле postId которое определяет какой комментарий принадлежит какому посту

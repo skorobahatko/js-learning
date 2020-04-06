@@ -1,11 +1,12 @@
-// let i = 0;
-// let j = 0;
-// for (i = 0; i < 60; i++ ) {
-//     document.write(`${i} second <br>`)
-//     if (i === 59) {
-//         document.write('hello');
-//         // for (j = 0; j < 24; j++){
-//             // do
-//         // }
-//     }
-// }
+function insert(num) {
+    document.form.textView.value = document.form.textView.value + num;
+}
+function nulled() {
+    document.form.textView.value = '';
+}
+function finish() {
+    let end = document.form.textView.value;
+    if (end) {
+        document.form.textView.value = eval(end);
+    }
+}
