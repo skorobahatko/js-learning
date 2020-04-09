@@ -205,39 +205,40 @@
 // ==============================================
 //
 
-// function Car (model, producer, yearProduct, maxSpeed, engineValue)  {
-//     this.model = model;
-//     this.producer = producer;
-//     this.yearProduct = yearProduct;
-//     this.maxSpeed = maxSpeed;
-//     this.engineValue = engineValue;
-//     this.drive = function () {
-//         console.log (`We ride ${this.maxSpeed} per hour!!!`);
-//     },
-//     this.info = function () {
-//         for (const key in this) {
-//             if (typeof this[key] !== 'function') {
-//                 console.log(this[key]);
-//                 }
-//             }
-//         }
-//     this.increaseMaxSpeed = function (newSpeed) {
-//         this.maxSpeed += newSpeed;
-//     },
-//     this.changeYear = function (newValue) {
-//         this.yearProduct = newValue;
-//     },
-//     this.addDriver = function (driver) {
-//         this.newDriver = driver;
-//     }
-// };
-// driv = {
-//     name: 'hallo',
-//     age: 19
-// };
-//
-// let car1 = new Car('opel', 'germany', 2015, 250, 10);
-// car1.info();
+function Car (model, producer, yearProduct, maxSpeed, engineValue)  {
+    this.model = model;
+    this.producer = producer;
+    this.yearProduct = yearProduct;
+    this.maxSpeed = maxSpeed;
+    this.engineValue = engineValue;
+    this.drive = function () {
+        console.log (`We ride ${this.maxSpeed} per hour!!!`);
+    },
+    this.info = function () {
+        for (const key in this) {
+            if (typeof this[key] !== 'function') {
+                console.log(this[key]);
+                }
+            }
+        }
+    this.increaseMaxSpeed = function (newSpeed) {
+        this.maxSpeed += newSpeed;
+    },
+    this.changeYear = function (newValue) {
+        this.yearProduct = newValue;
+    },
+    this.addDriver = function (driver) {
+        this.newDriver = driver;
+    }
+};
+driv = {
+    name: 'hallo',
+    age: 19
+};
+
+let car1 = new Car('opel', 'germany', 2015, 250, 10);
+car1.addDriver(driv);
+console.log (car1)
 //
 // ==============================================
 //     - Створити клас який дозволяє створювати об'єкти car, з властивостями модель, виробник, рік випуску,
