@@ -407,118 +407,118 @@ let cars = [
 //
 //
 // - взять слдующий массив
-let usersWithAddress = [
-    {
-        id: 1,
-        name: 'vasya',
-        age: 31,
-        status: false,
-        address: {
-            city: 'Lviv',
-            street: 'Shevchenko',
-            number: 16
-        }
-    }, {
-        id: 2,
-        name: 'petya',
-        age: 30,
-        status: true,
-        address: {
-            city: 'Lviv',
-            street: 'Shevchenko',
-            number: 1
-        }
-    }, {
-        id: 3,
-        name: 'kolya',
-        age: 29,
-        status: true,
-        address: {
-            city: 'Lviv',
-            street: 'Shevchenko',
-            number: 121
-        }
-    }, {
-        id: 4,
-        name: 'olya',
-        age: 28,
-        status: false,
-        address: {
-            city: 'Lviv',
-            street: 'Shevchenko',
-            number: 90
-        }
-    }, {
-        id: 5,
-        name: 'max',
-        age: 30,
-        status: true,
-        address: {
-            city: 'Lviv',
-            street: 'Shevchenko',
-            number: 115
-        }
-    }, {
-        id: 6,
-        name: 'anya',
-        age: 31,
-        status: false,
-        address: {
-            city: 'Lviv',
-            street: 'Shevchenko',
-            number: 2
-        }
-    }, {
-        id: 7,
-        name: 'oleg',
-        age: 28,
-        status: false,
-        address: {
-            city: 'Lviv',
-            street: 'Shevchenko',
-            number: 22
-        }
-    }, {
-        id: 8,
-        name: 'andrey',
-        age: 29,
-        status: true,
-        address: {
-            city: 'Lviv',
-            street: 'Shevchenko',
-            number: 43
-        }
-    }, {
-        id: 9,
-        name: 'masha',
-        age: 30,
-        status: true,
-        address: {
-            city: 'Lviv',
-            street: 'Shevchenko',
-            number: 12
-        }
-    }, {
-        id: 10,
-        name: 'olya',
-        age: 31,
-        status: false,
-        address: {
-            city: 'Lviv',
-            street: 'Shevchenko',
-            number: 16
-        }
-    }, {
-        id: 11,
-        name: 'max',
-        age: 31,
-        status: true,
-        address: {
-            city: 'Lviv',
-            street: 'Shevchenko',
-            number: 121
-        }
-    } ];
+// let usersWithAddress = [
+//     {
+//         id: 1,
+//         name: 'vasya',
+//         age: 31,
+//         status: false,
+//         address: {
+//             city: 'Lviv',
+//             street: 'Shevchenko',
+//             number: 16
+//         }
+//     }, {
+//         id: 2,
+//         name: 'petya',
+//         age: 30,
+//         status: true,
+//         address: {
+//             city: 'Lviv',
+//             street: 'Shevchenko',
+//             number: 1
+//         }
+//     }, {
+//         id: 3,
+//         name: 'kolya',
+//         age: 29,
+//         status: true,
+//         address: {
+//             city: 'Lviv',
+//             street: 'Shevchenko',
+//             number: 121
+//         }
+//     }, {
+//         id: 4,
+//         name: 'olya',
+//         age: 28,
+//         status: false,
+//         address: {
+//             city: 'Lviv',
+//             street: 'Shevchenko',
+//             number: 90
+//         }
+//     }, {
+//         id: 5,
+//         name: 'max',
+//         age: 30,
+//         status: true,
+//         address: {
+//             city: 'Lviv',
+//             street: 'Shevchenko',
+//             number: 115
+//         }
+//     }, {
+//         id: 6,
+//         name: 'anya',
+//         age: 31,
+//         status: false,
+//         address: {
+//             city: 'Lviv',
+//             street: 'Shevchenko',
+//             number: 2
+//         }
+//     }, {
+//         id: 7,
+//         name: 'oleg',
+//         age: 28,
+//         status: false,
+//         address: {
+//             city: 'Lviv',
+//             street: 'Shevchenko',
+//             number: 22
+//         }
+//     }, {
+//         id: 8,
+//         name: 'andrey',
+//         age: 29,
+//         status: true,
+//         address: {
+//             city: 'Lviv',
+//             street: 'Shevchenko',
+//             number: 43
+//         }
+//     }, {
+//         id: 9,
+//         name: 'masha',
+//         age: 30,
+//         status: true,
+//         address: {
+//             city: 'Lviv',
+//             street: 'Shevchenko',
+//             number: 12
+//         }
+//     }, {
+//         id: 10,
+//         name: 'olya',
+//         age: 31,
+//         status: false,
+//         address: {
+//             city: 'Lviv',
+//             street: 'Shevchenko',
+//             number: 16
+//         }
+//     }, {
+//         id: 11,
+//         name: 'max',
+//         age: 31,
+//         status: true,
+//         address: {
+//             city: 'Lviv',
+//             street: 'Shevchenko',
+//             number: 121
+//         }
+//     } ];
 // -- отсортировать его по id пользователей
 
 // let sortById = usersWithAddress.sort((a,b) => a.id - b.id);
@@ -579,31 +579,31 @@ let usersWithAddress = [
 
 // -- отфильтровать (оставить) тех кто младше 30
 
-let filterAge30 = usersWithAddress.filter(agee => agee.age < 30);
-console.log (filterAge30);
+// let filterAge30 = usersWithAddress.filter(agee => agee.age < 30);
+// console.log (filterAge30);
 
 // -- отфильтровать (оставить) тех у кого отрицательный статус
 
-let filterStatusFalse = usersWithAddress.filter(user => user.status === false);
-console.log (filterStatusFalse);
+// let filterStatusFalse = usersWithAddress.filter(user => user.status === false);
+// console.log (filterStatusFalse);
 
 // -- отфильтровать (оставить) тех у кого отрицательный статус и младше 30 лет
 
-let filterAge30False = usersWithAddress.filter(user => {
-    if (user.status === false && user.age < 30) {
-        return user
-    }
-});
-console.log (filterAge30False);
+// let filterAge30False = usersWithAddress.filter(user => {
+//     if (user.status === false && user.age < 30) {
+//         return user
+//     }
+// });
+// console.log (filterAge30False);
 
 // -- отфильтровать (оставить) тех у кого номер дома четный
 
-let filterByNumberOfHouse = usersWithAddress.filter(user => {
-    if (user.address.number % 2 === 0) {
-        return user
-    }
-});
-console.log (filterByNumberOfHouse);
+// let filterByNumberOfHouse = usersWithAddress.filter(user => {
+//     if (user.address.number % 2 === 0) {
+//         return user
+//     }
+// });
+// console.log (filterByNumberOfHouse);
 //
 //
 // ===========================
@@ -628,7 +628,16 @@ console.log (filterByNumberOfHouse);
 //     Вывод: наибольший и наименьший индекс в массиве заданного элемента. Если такого элемента нет в массиве, выведите -1.
 //
 // Пример:
-//     Arr = [1, 2, 3, 4, 4, 4, 4, 7, 7, 9, 14]
+    let arr = [1, 2, 5, 10, 15, 15, 3, 4, 4, 4, 4, 7, 7, 9, 14];
+function findIndex (array, numberForIndex) {
+    let arrayToShow = array.sort ((a, b) => a - b);
+    console.log (array);
+    let maxIndex = array.lastIndexOf(numberForIndex);
+    let minIndex = array.indexOf(numberForIndex);
+    return minIndex + ',' + maxIndex
+}
+
+console.log (findIndex(arr, 15));
 // 1. Key = 1
 // Answer: MinIndex = 0, MaxIndex = 0.
 // 2. Key = 4
